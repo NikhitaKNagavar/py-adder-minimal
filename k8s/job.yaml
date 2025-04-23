@@ -1,0 +1,12 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: adder-job
+spec:
+  template:
+    spec:
+      containers:
+        - name: adder
+          image: yourusername/adder # Replace with your Docker Hub username
+      restartPolicy: Never
+  backoffLimit: 2
